@@ -1,0 +1,15 @@
+{
+  "name": "testing-fundamentals",
+  "version": "1.0.0",
+  "description": "Fundamentals on javascript testing",
+  "main": "index.js",
+  "repository": "https://github.com/bala-krishna-challa/testing_fundamentals.git",
+  "author": "Bala Challa <balakrishnachalla@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^29.3.1"
+  }
+}

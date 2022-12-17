@@ -1,5 +1,6 @@
 const { add, subtract, addAsync, subtractAsync } = require("./math_lib");
-const { expect, test } = require("./testing_lib.js");
+// We are now using jest directly...
+// const { expect, test } = require("./testing_lib.js");
 
 test("add should add numbers synchronously", () => {
   const a = 5;
