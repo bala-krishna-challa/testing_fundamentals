@@ -1,6 +1,6 @@
-const test = (testName, fn) => {
+const test = async (testName, fn) => {
   try {
-    fn();
+    await fn();
     console.log(`✔️  ${testName}`);
   } catch (error) {
     console.error(`❌ ${testName}`);
