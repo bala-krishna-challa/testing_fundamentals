@@ -7,9 +7,12 @@
   "author": "Bala Challa <balakrishnachalla@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
-    "jest": "^29.3.1"
+    "create-jest-runner": "^0.12.2",
+    "jest": "^29.3.1",
+    "jest-worker": "^29.3.1"
   }
 }

@@ -827,7 +827,7 @@ chalk@^2.0.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chalk@^4.0.0:
+chalk@^4.0.0, chalk@^4.1.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
@@ -907,6 +907,15 @@ convert-source-map@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-2.0.0.tgz#4b560f649fc4e918dd0ab75cf4961e8bc882d82a"
   integrity sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==
+
+create-jest-runner@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/create-jest-runner/-/create-jest-runner-0.12.2.tgz#5b934d9a90a5b29ac56080139b9b913abb7a6ba2"
+  integrity sha512-laoTt/EHTa0MXXveZfwebaxprz1RdV5my2gvl01D3LcSb8nrXzfdflxHwkvwlcGt8/WO+i+MmEt7XBj++3e2jg==
+  dependencies:
+    chalk "^4.1.0"
+    jest-worker "^29.0.0"
+    p-limit "^3.1.0"
 
 cross-spawn@^7.0.3:
   version "7.0.3"
@@ -1574,7 +1583,7 @@ jest-watcher@^29.3.1:
     jest-util "^29.3.1"
     string-length "^4.0.1"
 
-jest-worker@^29.3.1:
+jest-worker@^29.0.0, jest-worker@^29.3.1:
   version "29.3.1"
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-29.3.1.tgz#e9462161017a9bb176380d721cab022661da3d6b"
   integrity sha512-lY4AnnmsEWeiXirAIA0c9SDPbuCBq8IYuDVL8PMm0MZ2PEs2yPvRA/J64QBXuZp7CYKrDM/rmNrc9/i3KJQncw==
