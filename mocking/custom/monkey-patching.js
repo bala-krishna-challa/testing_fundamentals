@@ -1,7 +1,3 @@
-const assert = require("assert");
-const startGame = require("../game");
-const utils = require("../utils");
-
 const fn = (impl = () => {}) => {
   const mockFn = (...args) => {
     mockFn.mock.calls.push(args);
@@ -14,16 +10,20 @@ const fn = (impl = () => {}) => {
   return mockFn;
 };
 
-const spyOn = (obj, prop) => {
-  const originalFn = obj[prop];
-  obj[prop] = fn();
-  obj[prop].mockRestore = () => {
-    obj[prop] = originalFn;
-  };
+const utilsPath = require.resolve("../utils");
+require.cache[utilsPath] = {
+  id: utilsPath,
+  filename: utilsPath,
+  loaded: true,
+  exports: {
+    getWinner: fn((p1, p2) => p1),
+  },
 };
 
-spyOn(utils, "getWinner");
-utils.getWinner.mockImplemention((p1, p2) => p1);
+const assert = require("assert");
+const startGame = require("../game");
+const utils = require("../utils");
+
 const winner = startGame("Player X", "Player Y");
 assert.strictEqual(winner, "Player X");
 assert.deepStrictEqual(utils.getWinner.mock.calls, [
@@ -31,5 +31,4 @@ assert.deepStrictEqual(utils.getWinner.mock.calls, [
   ["Player X", "Player Y"],
 ]);
 
-utils.getWinner.mockRestore();
-console.log(utils.getWinner);
+delete require.cache[utilsPath];
